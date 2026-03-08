@@ -18,7 +18,7 @@ const Login = ({ setLoginUser }) => {
     try {
       if (state === "register") {
         const response = await api.post(
-          "http://urbanrentals-backend-production.up.railway.app/user/register",
+          "/user/register",
           { name, email, password, role }
         );
 
@@ -27,7 +27,7 @@ const Login = ({ setLoginUser }) => {
         setState("login");
       } else {
         const res = await api.post(
-          "http://urbanrentals-backend-production.up.railway.app/user/login",
+          "/user/login",
           { email, password }
         );
 
